@@ -35,60 +35,61 @@ class main {
         }
     }
     dateCode    = function(param = new Date()) {
-            const datex = new Date(param).getDate(),
-                date    = (datex > 9) ? datex : '0' + datex,
-                monthx  = new Date(param).getMonth() + 1,
-                month   = (monthx > 9) ? monthx : '0' + monthx,
-                year    = new Date(param).getFullYear(),
-                last    = new Date(year, monthx, 0).getDate(),
-                LTime   = new Date (param).setHours(23,59,59,999), 
-                FTime   = new Date (param).setHours(0,0,0,0)
-                
-            return {
-                longText    : new Date(param).toLocaleString('default', {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'}),
-                dateText    : new Date(param).toLocaleString('default', {weekday:  'short', day: 'numeric', month: 'short', year: 'numeric'}),
-                monthCode   : `${month}${year}`,
-                dateCode    : `${date}${month}${year}`,
-                rcpDate     : `${year}${month}${date}`,
-                rcpMonth    : `${year}${month}`,
-                length      : datex,
-                first       : 1,
-                firstDay    : new Date(`${year}/${month}/1`).getDay(),
-                firstName   : new Date(`${year}/${month}/1`).toLocaleString('default', {weekday: 'short'}),
-                firstLong   : new Date(`${year}/${month}/1`).toLocaleString('default', {weekday: 'long'}),
-                last        : last,
-                lastDay     : new Date(`${year}/${month}/${last}`).getDay(),
-                lastName    : new Date(`${year}/${month}/${last}`).toLocaleString('default', {weekday: 'short'}),
-                lastLong    : new Date(`${year}/${month}/${last}`).toLocaleString('default', {weekday: 'long'}),
-                date        : datex,
-                dateNum     : date,
-                allLong     : new Date(param).toLocaleString('default', {weekday: 'long', date: 'numeric', month: 'long', year: 'numeric'}),
-                dateLong    : new Date(param).toLocaleString('default', {date: 'numeric', month: 'long', year: 'numeric'}),
-                dayName     : new Date(param).toLocaleString('default', {weekday: 'short'}),
-                dayLong     : new Date(param).toLocaleString('default', {weekday: 'long'}),
-                monthNum    : month,
-                month       : monthx,
-                monthName   : new Date(param).toLocaleString('default', {month: 'short'}),
-                monthLong   : new Date(param).toLocaleString('default', {month: 'long'}),
-                monthYear   : new Date(param).toLocaleString('default', {month: 'long', year: 'numeric'}),
-                year        : year,
-                firstDayTime: new Date (FTime).getTime(),
-lastDayTime : new Date (LTime).getTime(),                nextMonth   : new Date(new Date (param).setMonth(new Date(param).getMonth() + 1)),
-                prevMonth   : new Date(new Date (param).setMonth(new Date(param).getMonth() - 1))
-            }
+        const datex = new Date(param).getDate(),
+            date    = (datex > 9) ? datex : '0' + datex,
+            monthx  = new Date(param).getMonth() + 1,
+            month   = (monthx > 9) ? monthx : '0' + monthx,
+            year    = new Date(param).getFullYear(),
+            last    = new Date(year, monthx, 0).getDate(),
+            LTime   = new Date (param).setHours(23,59,59,999), 
+            FTime   = new Date (param).setHours(0,0,0,0)
+            
+        return {
+            longText    : new Date(param).toLocaleString('default', {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'}),
+            dateText    : new Date(param).toLocaleString('default', {weekday:  'short', day: 'numeric', month: 'short', year: 'numeric'}),
+            monthCode   : `${month}${year}`,
+            dateCode    : `${date}${month}${year}`,
+            rcpDate     : `${year}${month}${date}`,
+            rcpMonth    : `${year}${month}`,
+            length      : datex,
+            first       : 1,
+            firstDay    : new Date(`${year}/${month}/1`).getDay(),
+            firstName   : new Date(`${year}/${month}/1`).toLocaleString('default', {weekday: 'short'}),
+            firstLong   : new Date(`${year}/${month}/1`).toLocaleString('default', {weekday: 'long'}),
+            last        : last,
+            lastDay     : new Date(`${year}/${month}/${last}`).getDay(),
+            lastName    : new Date(`${year}/${month}/${last}`).toLocaleString('default', {weekday: 'short'}),
+            lastLong    : new Date(`${year}/${month}/${last}`).toLocaleString('default', {weekday: 'long'}),
+            date        : datex,
+            dateNum     : date,
+            allLong     : new Date(param).toLocaleString('default', {weekday: 'long', date: 'numeric', month: 'long', year: 'numeric'}),
+            dateLong    : new Date(param).toLocaleString('default', {date: 'numeric', month: 'long', year: 'numeric'}),
+            dayName     : new Date(param).toLocaleString('default', {weekday: 'short'}),
+            dayLong     : new Date(param).toLocaleString('default', {weekday: 'long'}),
+            monthNum    : month,
+            month       : monthx,
+            monthName   : new Date(param).toLocaleString('default', {month: 'short'}),
+            monthLong   : new Date(param).toLocaleString('default', {month: 'long'}),
+            monthYear   : new Date(param).toLocaleString('default', {month: 'long', year: 'numeric'}),
+            year        : year,
+            firstDayTime: new Date (FTime).getTime(),
+            lastDayTime : new Date (LTime).getTime(),
+            nextMonth   : new Date(new Date (param).setMonth(new Date(param).getMonth() + 1)),
+            prevMonth   : new Date(new Date (param).setMonth(new Date(param).getMonth() - 1))
         }
+    }
     dateRange   = function (dateOne, dateTwo) {
-            const timeOne   = new Date (dateOne).getTime(),
-                timeTwo     = new Date (dateTwo).getTime()
-                
-            return {
-                milSecRange : ((timeTwo - timeTwo) < 0) ? parseInt((timeTwo - timeOne)) * 1 : parseInt(timeTwo - timeOne),
-                secRange    : milSecRange / 1000,
-                minRange    : secRange / 60,
-                hourRange   : minRange / 60,
-                dayRange    : hourRange / 24
-            }
+        const timeOne   = new Date (dateOne).getTime(),
+            timeTwo     = new Date (dateTwo).getTime()
+            
+        return {
+            milSecRange : ((timeTwo - timeTwo) < 0) ? parseInt((timeTwo - timeOne)) * 1 : parseInt(timeTwo - timeOne),
+            secRange    : milSecRange / 1000,
+            minRange    : secRange / 60,
+            hourRange   : minRange / 60,
+            dayRange    : hourRange / 24
         }
+    }
     setLoad     = function (elmID) {
         const elm    = document.querySelector(elmID)
         if (elm.parentElement.style.position == 'static') elm.parentElement.style.position = 'absolute'
@@ -197,7 +198,7 @@ lastDayTime : new Date (LTime).getTime(),                nextMonth   : new Date(
     }*/
 }
 
-/*class dataBase {
+class dataBase {
     DB      = null
     dbName  = null 
     version = null
@@ -239,7 +240,7 @@ lastDayTime : new Date (LTime).getTime(),                nextMonth   : new Date(
         }
         trx.onerror = (error) => alert(error)
     }
-}*/
+}
 
 class calendarSet {
     
