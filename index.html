@@ -1,0 +1,1295 @@
+                                                                                                            
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+  <!-- JS -->
+  <script src="/js/config.js"></script>
+  
+  <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/font/fontawesome/css/all.css">
+</head>
+
+<body>
+    <div class="login default dis-none">
+        <div class="login-form white">
+            <h6>LOGIN </h6>
+            <div class="login-group">
+                <label for="login-id">ID</label>
+                <input type="number" id="login-id">
+            </div>
+            <div class="login-group">
+                <label for="login-name">NAMA</label>
+                <input type="number" id="login-name">
+            </div>
+            <div class="login-group">
+                <label for="login-email">EMAIL</label>
+                <input type="email" id="login-email">
+            </div>
+            
+        </div>
+    </div>
+    <div class="alert dis-none">
+        <div class="alert-content white">
+            <div class="alert-head clr-red">
+                <i class="fas fa-circle-exclamation" id="alert-icon"></i> &nbsp;
+                <span id="alert-header"></span>
+            </div>
+            <div class="alert-data">
+                <p id="alert-text"></p>
+            </div>
+            <div class="alert-tab">
+                <div class="alert-btn br-default clr-default" id="alert-cancel">Cancel</div>
+                <div class="center-full"></div>
+                <div class="alert-btn clr-white default" id="alert-ok">OK </div>
+            </div>
+        </div>
+    </div>
+    <header class="">
+        <p>Hi, Bend - 165925 </p> <i class="fas fa-cog fa-spin"></i>
+    </header>
+    
+    <div id="content-box">
+        <div id="main-content">
+            <!-- dashboard -->
+            <div class="content" id="dashboard" data-target="dashboard">
+                <div class="content-bg default"></div>
+                <div class="content-box">
+                    <div class="content-top"></div>
+                    
+                    <!-- your content -->
+                    <div class="dash-top clr-white">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                    <br>
+                    <div class="dash-sales">
+                        <div class="dash-sales-box">
+                            <div class="ds-top clr-default">
+                                <label></label>
+                                <h1 data-percent="">&nbsp;</h1>
+                                <p data-text=" ">&nbsp;</p>
+                                <span>&nbsp;</span>
+                            </div>
+                            <br>
+                            <div class="ds-devide clr-white">
+                                <div class="sales-devide default">
+                                    <div class="devide-head">
+                                        <span>FTR</span>
+                                        <div class="devide-progress"></div>
+                                    </div>
+                                    <div class="devide-current">
+                                        <h5>0</h5>
+                                        <h5>0</h5>
+                                    </div>
+                                    <div class="devide-gap">
+                                        <label>0</label>
+                                        <label>0</label>
+                                    </div>
+                                </div>
+                                <span class="clr-default">|</span>
+                                <div class="sales-devide default">
+                                    <div class="devide-head">
+                                        <span>ACC</span>
+                                        <div class="devide-progress"></div>
+                                    </div>
+                                    <div class="devide-current">
+                                        <h5>0</h5>
+                                        <h5>0</h5>
+                                    </div>
+                                    <div class="devide-gap">
+                                        <label>0</label>
+                                        <label>0</label>
+                                    </div>
+                                </div>
+                                <div class="sales-devide default">
+                                    <div class="devide-head">
+                                        <span>FP</span>
+                                        <div class="devide-progress"></div>
+                                    </div>
+                                    <div class="devide-current">
+                                        <h5>0</h5>
+                                        <h5>0</h5>
+                                    </div>
+                                    <div class="devide-gap">
+                                        <label>0</label>
+                                        <label>0</label>
+                                    </div>
+                                </div>
+                                <span class="clr-default">|</span>
+                                <div class="sales-devide default">
+                                    <div class="devide-head">
+                                        <span>COMSER</span>
+                                        <div class="devide-progress"></div>
+                                    </div>
+                                    <div class="devide-current">
+                                        <h5>0</h5>
+                                        <h5>0</h5>
+                                    </div>
+                                    <div class="devide-gap">
+                                        <label>0</label>
+                                        <label>0</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dash-sales-today">
+                            
+                        </div>
+                    </div>
+                    <div class="hr grey"></div>
+                    <div class="dash-calendar">
+                        <div class="dc-head flex-beetwen">
+                            <i class="fas fa-chevron-left clr-yellow" id="calendar-previous"></i>
+                            <span class="clr-default"  id="calendar-month">November 2024</span>
+                            <i class="fas fa-chevron-right clr-yellow" id="calendar-next"></i>
+                        </div>
+                        <br>
+                        <div class="dc-days flex-beetwen mb-1">
+                            <span class="clr-red">M</span>
+                            <span>S</span>
+                            <span>S</span>
+                            <span>R</span>
+                            <span>K</span>
+                            <span>J</span>
+                            <span>S</span>
+                        </div>
+                        <div class="dc-date" id="dc-date">
+                            
+                            <div class="dc-date-box dis-none">
+                                <div class="date-head flex-start">
+                                    <span class="date-num">01</span>
+                                    <span class="date-sch">A0003</span>
+                                </div>
+                                <div class="date-data">
+                                    <div class="data-progress red"></div>
+                                    <div class="data-progress green"></div>
+                                    <div class="data-progress blue"></div>
+                                    <div class="data-progress yellow"></div>
+                                    <div class="data-progress grey"></div>
+                                    <div class="data-progress purple"></div>
+                                    <div class="data-progress orange"></div>
+                                    <div class="data-progress black"></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="content dis-none" id="follow-up" data-target="fu">
+                <div class="content-bg default"></div>
+                <div class="content-box">
+                    <div class="content-top"></div>
+                    <!-- your content -->
+                    
+                </div>
+            </div>
+            
+            <div class="content dis-none" id="add" data-target="add">
+                <div class="content-bg default"></div>
+                <div class="content-box">
+                    <div class="content-top"></div>
+                    <!-- your content -->
+                    <div class="hr dis-none white"></div>
+                    <div class="add-content">
+                        <div class="add-tab flex-center gap-5 ">
+                            <div class="add-button clr-default white flex-center">ADD FU <i class="fas fa-rocket"></i></div>
+                            <div class="add-button clr-default white flex-center dis-none">ADD AS <i class="fas fa-hand-holding-dollar"></i></div>
+                        </div>
+                        <div class="hr white"></div>
+                        
+                        <div class="add-box dis-none">
+                            <div class="add-as">
+                                <div class="as-add-top">
+                                    <h5 class="clr-white">ADD AFTER SALES</h5>
+                                    <div class="flex-center clr-white">
+                                        <div class="as-reciept flex-center clr-white">
+                                            <input type="text" id="reciept-type" class="clr-white" maxlength="3">.
+                                            <input type="number" id="reciept-cashier" class="clr-white" max="999">.
+                                            <input type="number" id="reciept-date" class="clr-white" readonly>.
+                                            <input type="number" id="reciept-order" class="clr-white" max="999">
+                                            <input type="date" id="reciept-date-control">
+                                        </div> |
+                                        <i class="fas fa-search white clr-default grid-center" id="as-add-reciept-search"></i>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="as-form">
+                                    <div class="as-form-hidder dis-none"></div>
+                                    <div class="add-group">
+                                        <label>custName</label>
+                                        <input type="text" id="as-cust-name">
+                                    </div>
+                                    <div class="add-group">
+                                        <label>phone</label>
+                                        <input type="text" id="as-cust-name">
+                                    </div>
+                                    <div class="add-group">
+                                        <label>address</label>
+                                        <textarea name="" id="" rows="3 "></textarea>
+                                    </div>
+                                    <div class="hr default"></div>
+                                    
+                                    <div class="add-group">
+                                        <label>requestDate</label>
+                                        <input type="date" id="as-request-date">
+                                        <input type="checkbox" class="check" data-text="pickUp">
+                                    </div>
+                                    <div class="add-group">
+                                        <label>instalDate</label>
+                                        <input type="text" id="as-cust-name">
+                                        <input type="checkbox" class="check" data-text="pickUp">
+                                    </div>
+                                    <div class="add-group">
+                                        <label>status</label>
+                                        <select name="" id="">
+                                            <option value="">Progress</option>
+                                            <option value="">Done</option>
+                                            <option value="">Problem</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="as-container">
+                                        <br>
+                                        <div class="hr default"></div>
+                                        <h5 class="default">Container</h5>
+                                        <div class="container-group mb-4" id="cont-h6">
+                                            <div class="add-group mb-0">
+                                                <label>conatiner num</label>
+                                                <input type="text">
+                                                <i class="fas fa-trash clr-grey br-grey"></i>
+                                                <i class="blue">H6</i>
+                                                <i class="fas fa-question"></i>
+                                            </div>
+                                            <div class="flex-center mb-0">
+                                                <div class="add-group mb-0">
+                                                    <label>Estimasi Jalan</label>
+                                                    <input type="text" value="" readonly>
+                                                </div>
+                                                <div class="add-group mb-0">
+                                                    <label>Estimasi Tiba</label>
+                                                    <input type="text" value="" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="flex-center mb-0">
+                                                <div class="add-group mb-0">
+                                                    <label>Posisi</label>
+                                                    <input type="text" value="" readonly>
+                                                </div>
+                                                <div class="add-group mb-0">
+                                                    <label>Progress</label>
+                                                    <input type="text" value="" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container-group mb-4" id="cont-72">
+                                            <div class="add-group mb-0">
+                                                <label>conatiner num</label>
+                                                <input type="text">
+                                                <i class="fas fa-trash clr-grey br-grey"></i>
+                                                <i class="yellow">72</i>
+                                                <i class="fas fa-question"></i>
+                                            </div>
+                                            <div class="flex-center mb-0">
+                                                <div class="add-group mb-0">
+                                                    <label>Estimasi Jalan</label>
+                                                    <input type="text" value="" readonly>
+                                                </div>
+                                                <div class="add-group mb-0">
+                                                    <label>Estimasi Tiba</label>
+                                                    <input type="text" value="" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="flex-center mb-0">
+                                                <div class="add-group mb-0">
+                                                    <label>Posisi</label>
+                                                    <input type="text" value="" readonly>
+                                                </div>
+                                                <div class="add-group mb-0">
+                                                    <label>Progress</label>
+                                                    <input type="text" value="" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container-group" id="cont-23">
+                                            <div class="add-group mb-0">
+                                                <label>conatiner num</label>
+                                                <input type="text">
+                                                <i class="fas fa-trash clr-grey br-grey"></i>
+                                                <i class="green">23</i>
+                                                <i class="fas fa-question"></i>
+                                            </div>
+                                            <div class="flex-center mb-0">
+                                                <div class="add-group mb-0">
+                                                    <label>Estimasi Jalan</label>
+                                                    <input type="text" value="" readonly>
+                                                </div>
+                                                <div class="add-group mb-0">
+                                                    <label>Estimasi Tiba</label>
+                                                    <input type="text" value="" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="flex-center mb-0">
+                                                <div class="add-group mb-0">
+                                                    <label>Posisi</label>
+                                                    <input type="text" value="" readonly>
+                                                </div>
+                                                <div class="add-group mb-0">
+                                                    <label>Progress</label>
+                                                    <input type="text" value="" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="hr default"></div>
+                                    <h5 class="default">List of items</h5>
+                                    <div class="add-items flex-beetwen" data-note="">
+                                        <span class="clr-default" id="as-add-note">1 SKU - 2 QTY - 1 SITE</span>
+                                        <i class="fas fa-plus clr-red" id="as-add-item" data-target="#as-items"></i>
+                                    </div>
+                                    <br>
+                                    <div id="as-items">
+                                            
+                                        <div class="items-group">
+                                            <input type="text" class="article" maxlength="8" placeholder="article">
+                                            <input type="text" class="product" placeholder="product name">
+                                            <input type="number" class="qty" placeholder="qty">
+                                            <select class="site">
+                                                <option value="">--choose site--</option>
+                                                <option value="23">23 - Cikupa</option>
+                                                <option value="72">72 - Jababeka</option>
+                                                <option value="DN">DN - WH Maluku</option>
+                                                <option value="G8">G8 - Informa Maluku City</option>
+                                                <option value="H6">H6 - Sidoarjo</option>
+                                            </select>
+                                            <i class="fas fa-trash red"></i>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="hr default"></div>
+                                        
+                                    <div class="as-control flex-center">
+                                        <div class="as-button yellow">Reset</div>
+                                        <div class="as-button blue">Save</div>
+                                        <div class="as-button dis-none"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="as-fetch-reciept dis-none">
+                                    <div class="as-fetch-reciept-box white">
+                                        <div class="as-add-reciept-top add-group m-0">
+                                            <input type="text" id="as-add-text-search" placeholder="type to find">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <i class="fas fa-x" id="as-add-reciept-close"></i>
+                                            <input type="date" id="as-add-date-search">
+                                        </div>
+                                        <br>
+                                        <div class="as-add-reciept-table">
+                                            <table id="as-add-reciept-table">
+                                                <thead>
+                                                    <th class="default">#</th>
+                                                    <th class="default">Progress</th>
+                                                    <th class="default">Container</th>
+                                                    <th class="default">Reseteciept</th>
+                                                    <th class="default">Site</th>
+                                                    <th class="default">DO</th>
+                                                    <th class="default">Customer</th>
+                                                    <th class="default">Position</th>
+                                                    <th class="default">ETS</th>
+                                                    <th class="default">Request</th>
+                                                    <th class="default">Instal</th>
+                                                    <th class="default">Address</th>
+                                                    <th class="default">Phone</th>
+                                                    <th class="default">Container Date</th>
+                                                    <th class="default">ETD</th>
+                                                    <th class="default">ATD</th>
+                                                    <th class="default">ETA</th>
+                                                    <th class="default">ATA</th>
+                                                    <th class="default">Unloading</th>
+                                                    <th class="default">Note</th>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>SPNU1234567</td>
+                                                        <td>UG8.3.20240921.21</td>
+                                                        <td>Benhard Sabandar</td>
+                                                        <td>Kamis, 22 September 2024</td>
+                                                        <td>Jumat, 23 September 2024</td>
+                                                        <td>Ambon</td>
+                                                        <td>081234567890/080987654321</td>
+                                                        <td>Delivery</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <br><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="content dis-none" id="after-sales" data-target="as">
+                <div class="content-bg default"></div>
+                <div class="content-box">
+                    <div class="content-top"></div>
+                    <!-- your content -->
+                    <div class="as-top">
+                        <div class="add-group">
+                            <input class="br-white clr-white" type="text" placeholder="">
+                            <i class="br-white clr-white fas fa-arrows-rotate"></i>
+                        </div>
+                        <div class="hr white"></div>
+                    </div>
+                    <div class="as-tab">
+                        <div class="position-btn" data-text="NDC-PREPARE"><img src="asImg/forklift.png" alt="ndc-prepare"></div>
+                        <div class="position-btn" data-text="SDC-PREPARE"><img src="asImg/coworking.png" alt="sdc-prepare"></div>
+                        <div class="position-btn" data-text="LOADING"><img src="asImg/container (1).png" alt="loading"></div>
+                        <div class="position-btn" data-text="PORT-ORIGIN"><img src="asImg/stack.png" alt="port-origin"></div>
+                        <div class="position-btn" data-text="OTW"><img src="asImg/cargo-ship (1).png" alt="otw"></div>
+                        <div class="position-btn" data-text="YARD"><img src="asImg/cargo (2).png" alt="yard"></div>
+                        <div class="position-btn" data-text="UNLOADING"><img src="asImg/container (2).png" alt="unloading"></div>
+                        <div class="position-btn" data-text="READY"><img src="asImg/check.png" alt="ready"></div>
+                        <div class="position-btn" data-text="PICK-UP"><img src="asImg/delivery-service.png" alt="pick-up"></div>
+                        <div class="position-btn" data-text="DELIVERY"><img src="asImg/delivery-truck.png" alt="delivery"></div>
+                        <div class="position-btn" data-text="INSTALASI"><img src="asImg/repair-tools.png" alt="instalasi"></div>
+                        <div class="position-btn" data-text="PENDING DELIV"><img src="asImg/deadline.png" alt="pending"></div>
+                        <div class="position-btn" data-text="PENDING PICKUP"><img src="asImg/deadline.png" alt="pending"></div>
+                    </div> 
+                    <div class="hr default"></div>
+                    <div class="as-list">
+                        <div class="as-box">
+                            <div class="as-box-head flex-beetwen">
+                                <span>UG8.1.20240920.20 - Customer Name</span>
+                                <span>OTW</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content dis-none" id="sales-card" data-target="sc">
+                <div class="content-bg default"></div>
+                <div class="content-box">
+                    <div class="content-top"></div>
+                    <!-- your content -->
+                    <br>
+                    <div class="add-group sc-top mb-2">
+                        <input id="sc-text-input" type="text" class="br-white clr-white" value="Saturday, July 13th 2024">
+                        <input id="sc-date-input" type="date">
+                        <i class="br-white fas fa-pencil clr-white" id="sc-open" data-text="update"></i>
+                    </div>
+                    <h2 class="head clr-white br-default">MONTHLY</h2>
+                    <div class="sc-month">
+                        <div class="sc-resume-top dis-none"></div>
+                        <div class="sc-diagram">
+                            <div class="diagram-bg">
+                                <div class="diagram-line" data-text="100"></div>
+                                <div class="diagram-line" data-text="75"></div>
+                                <div class="diagram-line" data-text="50"></div>
+                                <div class="diagram-line" data-text="25"></div>
+                            </div>
+                            <div class="diagram-data">
+                                <div class="diagram-box main" data-text="main">
+                                    <div class="gap"></div>
+                                    <div class="current"></div>
+                                </div>
+                                <div class="diagram-box ftr" data-text="ftr">
+                                    <div class="gap"></div>
+                                    <div class="current"></div>
+                                </div>
+                                <div class="diagram-box acc" data-text="acc">
+                                    <div class="gap"></div>
+                                    <div class="current"></div>
+                                </div>
+                                <div class="diagram-box fp" data-text="fp">
+                                    <div class="gap"></div>
+                                    <div class="current"></div>
+                                </div>
+                                <div class="diagram-box comser" data-text="comser">
+                                    <div class="gap"></div>
+                                    <div class="current"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="diagram-detail hide">
+                            <div class="dg-detail-bar">
+                                <div class="detail-bar-box">
+                                    <div class="detail-gap"></div>
+                                    <div class="detail-current"></div>
+                                </div>
+                                <div class="dg-detail-bg">
+                                    <div class="detail-line" data-text="100"></div>
+                                    <div class="detail-line" data-text="75"></div>
+                                    <div class="detail-line" data-text="50"></div>
+                                    <div class="detail-line" data-text="25"></div>
+                                </div>
+                            </div>
+                            <div class="dg-detail-text">
+                                <div class="dg-detail-group">
+                                    <label>Target</label>
+                                    <span class="tgtx">150.450.000</span>
+                                    <span class="smtd">SMTD 87% <br> 115.090.250</span>
+                                </div>  
+                                <div class="dg-detail-group">
+                                    <label>Actual</label>
+                                    <span class="actual">150.450.000</span>
+                                    <span class="actualPrc">87%</span>
+                                </div>
+                                <div class="dg-detail-group">
+                                    <label>Gap</label>
+                                    <span class="gapx">-50.450.000</span>
+                                    <span class="gapPrc">-37%</span>
+                                </div>
+                                <div class="dg-detail-group">
+                                    <label>To Achiev</label>
+                                    <span class="toAcv">-50.450.000</span>
+                                    <span class="toAcvPrc">37%</span>
+                                </div>
+                                <div class="dg-detail-close">close</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr white"></div>
+                    <h2 class="head clr-white br-default dis-none">WEEKLY</h2>
+                    <div class="sc-weekly dis-none">
+                        <div class="weekly-head mb-4">
+                            <span class="main">MAIN</span>
+                            <span class="ftr">FTR</span>
+                            <span class="acc">ACC</span>
+                            <span class="fp">FP</span>
+                            <span class="comser">COMSER</span>
+                            <span class="blackx">ALL</span>
+                        </div>
+                        <div class="weeks-diagram">
+                            <div class="weeks-bg">
+                                <div class="weeks-line" data-text="100"></div>
+                                <div class="weeks-line" data-text="75"></div>
+                                <div class="weeks-line" data-text="50"></div>
+                                <div class="weeks-line" data-text="25"></div>
+                            </div>
+                            <div class="weeks-data">
+                                <div class="weeks-list">
+                                    <div class="weeks-bar week-1" data-text="Week 01">
+                                        <div class="weeks-dg bg-main clr-main"></div>
+                                        <div class="weeks-dg bg-ftr clr-ftr"></div>
+                                        <div class="weeks-dg bg-acc clr-acc"></div>
+                                        <div class="weeks-dg bg-fp clr-fp"></div>
+                                        <div class="weeks-dg bg-comser clr-comser"></div>
+                                        <div class="weeks-detail dis-none">
+                                            <div class="week-bar">
+                                                <div class="weeks-gap green" data-date="36.568.090"></div>
+                                                <div class="weeks-current default" data-text="+34.671.000"></div>
+                                            </div>
+                                            <div class="weeks-detail-data">
+                                                <div class="w-days-progress" data-text="02">
+                                                    <span>17.346.928</span>
+                                                    <span>104.678.098</span>
+                                                    <div class="w-days-bar"><span class="default"></span></div>
+                                                </div>
+                                                <div class="w-days-progress" data-text="02">
+                                                    <span>17.346.928</span>
+                                                    <span>104.678.098</span>
+                                                    <div class="w-days-bar"><span class="default"></span></div>
+                                                </div>
+                                                <div class="w-days-progress" data-text="02">
+                                                    <span>17.346.928</span>
+                                                    <span>104.678.098</span>
+                                                    <div class="w-days-bar"><span class="default"></span></div>
+                                                </div>
+                                                <div class="w-days-progress" data-text="02">
+                                                    <span>17.346.928</span>
+                                                    <span>104.678.098</span>
+                                                    <div class="w-days-bar"><span class="default"></span></div>
+                                                </div>
+                                                <div class="w-days-progress" data-text="02">
+                                                    <span>17.346.928</span>
+                                                    <span>104.678.098</span>
+                                                    <div class="w-days-bar"><span class="default"></span></div>
+                                                </div>
+                                                <div class="w-days-progress" data-text="02">
+                                                    <span>17.346.928</span>
+                                                    <span>104.678.098</span>
+                                                    <div class="w-days-bar"><span class="default"></span></div>
+                                                </div>
+                                                <div class="w-days-progress" data-text="02">
+                                                    <span>17.346.928</span>
+                                                    <span>104.678.098</span>
+                                                    <div class="w-days-bar"><span class="default"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="weeks-bar week-2" data-text="Week 02">
+                                        <div class="weeks-dg bg-main clr-main"></div>
+                                        <div class="weeks-dg bg-ftr clr-ftr"></div>
+                                        <div class="weeks-dg bg-acc clr-acc"></div>
+                                        <div class="weeks-dg bg-fp clr-fp"></div>
+                                        <div class="weeks-dg bg-comser clr-comser"></div>
+                                    </div>
+                                    <div class="weeks-bar week-3" data-text="Week 03">
+                                        <div class="weeks-dg bg-main clr-main"></div>
+                                        <div class="weeks-dg bg-ftr clr-ftr"></div>
+                                        <div class="weeks-dg bg-acc clr-acc"></div>
+                                        <div class="weeks-dg bg-fp clr-fp"></div>
+                                        <div class="weeks-dg bg-comser clr-comser"></div>
+                                    </div>
+                                    <div class="weeks-bar week-4" data-text="Week 04">
+                                        <div class="weeks-dg bg-main clr-main"></div>
+                                        <div class="weeks-dg bg-ftr clr-ftr"></div>
+                                        <div class="weeks-dg bg-acc clr-acc"></div>
+                                        <div class="weeks-dg bg-fp clr-fp"></div>
+                                        <div class="weeks-dg bg-comser clr-comser"></div>
+                                    </div>
+                                    <div class="weeks-bar week-5" data-text="Week 05">
+                                        <div class="weeks-dg bg-main clr-main"></div>
+                                        <div class="weeks-dg bg-ftr clr-ftr"></div>
+                                        <div class="weeks-dg bg-acc clr-acc"></div>
+                                        <div class="weeks-dg bg-fp clr-fp"></div>
+                                        <div class="weeks-dg bg-comser clr-comser"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr white dis-none"></div>
+                    <h2 class="head clr-white br-default">DAILY</h2>
+                    <div class="sc-daily">
+                        <div class="daily-head">
+                            <span class="main">MAIN</span>
+                            <span class="ftr">FTR</span>
+                            <span class="acc">ACC</span>
+                            <span class="fp">FP</span>
+                            <span class="comser">COMSER</span>
+                            <span class="blackx">ALL</span>
+                        </div>
+                        <div class="sc-days">
+                            <div class="days-list">
+                                <div class="daily-data">
+                                    <div class="day-top">
+                                        <div class="top-date" data-date="01"></div>
+                                        <div class="top-day">W1 D1 - Saturday</div>
+                                        <div class="top-schedule">H44</div>
+                                    </div>
+                                    <div class="day-diagram">
+                                        <div class="day-bar day-main" data-actual="3.45" data-target="600.02"></div>
+                                        <div class="day-bar day-ftr" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-acc" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-fp" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-comser" data-actual="3.45" data-target="6.02"></div>
+                                    </div>
+                                    <div class="day-detail">
+                                        <h5>Sat, June 1, 2024</h5>
+                                        <div class="day-detail-type bg-main">
+                                            <span class="type-head">All</span>
+                                            <div class="detail-group">
+                                                <span>Target</span>
+                                                <span>39.456.034</span>
+                                                <span>3%</span>
+                                            </div>
+                                            <div class="detail-group">
+                                                <span>Actual</span>
+                                                <span>39.456.034</span>
+                                                <span>100%</span>
+                                            </div>
+                                            <div class="detail-group">
+                                                <span>Gap</span>
+                                                <span>0</span>
+                                                <span>0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="day-detail-type bg-ftr">
+                                            <span class="type-head">Ftr</span>
+                                            <div class="detail-group">
+                                                <span>Target</span>
+                                                <span>39.456.034</span>
+                                                <span>3%</span>
+                                            </div>
+                                            <div class="detail-group">
+                                                <span>Actual</span>
+                                                <span>39.456.034</span>
+                                                <span>100%</span>
+                                            </div>
+                                            <div class="detail-group">
+                                                <span>Gap</span>
+                                                <span>0</span>
+                                                <span>0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="day-detail-type bg-acc">
+                                            <span class="type-head">Acc</span>
+                                            <div class="detail-group">
+                                                <span>Target</span>
+                                                <span>39.456.034</span>
+                                                <span>3%</span>
+                                            </div>
+                                            <div class="detail-group">
+                                                <span>Actual</span>
+                                                <span>39.456.034</span>
+                                                <span>100%</span>
+                                            </div>
+                                            <div class="detail-group">
+                                                <span>Gap</span>
+                                                <span>0</span>
+                                                <span>0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="day-detail-type bg-fp clr-black">
+                                            <span class="type-head br-past">Fp</span>
+                                            <div class="detail-group">
+                                                <span>Target</span>
+                                                <span>39.456.034</span>
+                                                <span>3%</span>
+                                            </div>
+                                            <div class="detail-group">
+                                                <span>Actual</span>
+                                                <span>39.456.034</span>
+                                                <span>100%</span>
+                                            </div>
+                                            <div class="detail-group">
+                                                <span>Gap</span>
+                                                <span>0</span>
+                                                <span>0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="day-detail-type bg-comser">
+                                            <span class="type-head">Comser</span>
+                                            <div class="detail-group">
+                                                <span>Target</span>
+                                                <span>39.456.034</span>
+                                                <span>3%</span>
+                                            </div>
+                                            <div class="detail-group">
+                                                <span>Actual</span>
+                                                <span>39.456.034</span>
+                                                <span>100%</span>
+                                            </div>
+                                            <div class="detail-group">
+                                                <span>Gap</span>
+                                                <span>0</span>
+                                                <span>0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="day-dept">
+                                            <div class="day-dept-group">
+                                                <span>AC</span>
+                                                <span>48.379.082</span>
+                                            </div>
+                                            <div class="day-dept-group">
+                                                <span>A</span>
+                                                <span>30.579.082</span>
+                                            </div>
+                                            <div class="day-dept-group">
+                                                <span>J</span>
+                                                <span>43.579.082</span>
+                                            </div>
+                                            <div class="day-dept-group">
+                                                <span>C</span>
+                                                <span>30.579.082</span>
+                                            </div>
+                                            <div class="day-dept-group">
+                                                <span>D</span>
+                                                <span>3.579.082</span>
+                                            </div>
+                                            <div class="day-dept-group">
+                                                <span>M</span>
+                                                <span>779.082</span>
+                                            </div>
+                                            <div class="day-dept-group">
+                                                <span>AK</span>
+                                                <span>1.579.082</span>
+                                            </div>
+                                        </div>
+                                        <div class="day-note">
+                                            <p>50 Rcp - 100 SKU - 120 Qty</p>
+                                            <i class="fas fa-arrow-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="daily-data">
+                                    <div class="day-top">
+                                        <div class="top-date" data-date="01"></div>
+                                        <div class="top-day">W1 D1 - Saturday</div>
+                                        <div class="top-schedule">H44</div>
+                                    </div>
+                                    <div class="day-diagram">
+                                        <div class="day-bar day-main" data-actual="3.45" data-target="600.02"></div>
+                                        <div class="day-bar day-ftr" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-acc" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-fp" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-comser" data-actual="3.45" data-target="6.02"></div>
+                                    </div>
+                                    <div class="day-detail dis-none">
+                                        <h6>Sat, June 1, 2024</h6>
+                                        <div class="day-detail-type">
+                                            <span>All</span>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="daily-data">
+                                    <div class="day-top">
+                                        <div class="top-date" data-date="01"></div>
+                                        <div class="top-day">W1 D1 - Saturday</div>
+                                        <div class="top-schedule">H44</div>
+                                    </div>
+                                    <div class="day-diagram">
+                                        <div class="day-bar day-main" data-actual="3.45" data-target="600.02"></div>
+                                        <div class="day-bar day-ftr" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-acc" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-fp" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-comser" data-actual="3.45" data-target="6.02"></div>
+                                    </div>
+                                    <div class="day-detail dis-none">
+                                        <h6>Sat, June 1, 2024</h6>
+                                        <div class="day-detail-type">
+                                            <span>All</span>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="daily-data">
+                                    <div class="day-top">
+                                        <div class="top-date" data-date="01"></div>
+                                        <div class="top-day">W1 D1 - Saturday</div>
+                                        <div class="top-schedule">H44</div>
+                                    </div>
+                                    <div class="day-diagram">
+                                        <div class="day-bar day-main" data-actual="3.45" data-target="600.02"></div>
+                                        <div class="day-bar day-ftr" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-acc" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-fp" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-comser" data-actual="3.45" data-target="6.02"></div>
+                                    </div>
+                                    <div class="day-detail dis-none">
+                                        <h6>Sat, June 1, 2024</h6>
+                                        <div class="day-detail-type">
+                                            <span>All</span>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="daily-data">
+                                    <div class="day-top">
+                                        <div class="top-date" data-date="01"></div>
+                                        <div class="top-day">W1 D1 - Saturday</div>
+                                        <div class="top-schedule">H44</div>
+                                    </div>
+                                    <div class="day-diagram">
+                                        <div class="day-bar day-main" data-actual="3.45" data-target="600.02"></div>
+                                        <div class="day-bar day-ftr" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-acc" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-fp" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-comser" data-actual="3.45" data-target="6.02"></div>
+                                    </div>
+                                    <div class="day-detail dis-none">
+                                        <h6>Sat, June 1, 2024</h6>
+                                        <div class="day-detail-type">
+                                            <span>All</span>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="daily-data">
+                                    <div class="day-top">
+                                        <div class="top-date" data-date="01"></div>
+                                        <div class="top-day">W1 D1 - Saturday</div>
+                                        <div class="top-schedule">H44</div>
+                                    </div>
+                                    <div class="day-diagram">
+                                        <div class="day-bar day-main" data-actual="3.45" data-target="600.02"></div>
+                                        <div class="day-bar day-ftr" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-acc" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-fp" data-actual="3.45" data-target="6.02"></div>
+                                        <div class="day-bar day-comser" data-actual="3.45" data-target="6.02"></div>
+                                    </div>
+                                    <div class="day-detail dis-none">
+                                        <h6>Sat, June 1, 2024</h6>
+                                        <div class="day-detail-type">
+                                            <span>All</span>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr white"></div>
+                    <h2 class="head clr-white br-default">DEPT</h2>
+                    <div class="sc-dept">
+                        <div class="sc-dept-list"></div>
+                        <div class="sc-dept-detail">
+                            <div class="dept-detail-left default">
+                                <div class="left-code">J</div>
+                                <div class="left-name">Mattress</div>
+                            </div>
+                            <div class="dept-detail-data">
+                                <div class="dept-detail-group default">
+                                    <label>Target</label>
+                                    <span>14.300.000</span>
+                                    <span>SMTD 27% <br> 3.650.000</span>
+                                </div>
+                                <div class="dept-detail-group default">
+                                    <label>Actual</label>
+                                    <span>9.650.000</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="dept-detail-group default">
+                                    <label>Gap</label>
+                                    <span>+6.000.000</span>
+                                    <span>+45%</span>
+                                </div>
+                                <div class="dept-detail-group default">
+                                    <label>To Achiev</label>
+                                    <span>-4.650.000</span>
+                                    <span>-25%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr white"></div>
+                    <h2 class="head clr-white br-default">ALL RECEIPT</h2>
+                    <div class="sc-reciept">
+                        <div class="sc-reciept-top add-group m-0">
+                            <input type="text" id="sc-text-search" placeholder="type to find">
+                            <i class="fas fa-calendar-alt"></i>
+                            <input type="date" id="sc-date-search">
+                        </div>
+                        <br>
+                        <div class="sc-reciept-table">
+                            <table id="sc-reciept-table">
+                                        <thead>
+                                            <th class="default">#</th>
+                                            <th class="default" data-index="0">
+                                                <div class="table-div flex-beetwen">
+                                                    Reciept<i class="fas fa-sort-down clr-white"></i></th>
+                                                </div>
+                                            <th class="default" data-index="1">
+                                                <div class="table-div flex-beetwen">
+                                                    SKU<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                            <th class="default" data-index="2">
+                                                <div class="table-div flex-beetwen">
+                                                    Item<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                            <th class="default" data-index="3">
+                                                <div class="table-div flex-beetwen">
+                                                    Dept<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                            <th class="default" data-index="4">
+                                                <div class="table-div flex-beetwen">
+                                                    Qty<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                            <th class="default" data-index="5">
+                                                <div class="table-div flex-beetwen">
+                                                    Price<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                            <th class="default" data-index="6">
+                                                <div class="table-div flex-beetwen">
+                                                    SP<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                            <th class="default" data-index="7">
+                                                <div class="table-div flex-beetwen">
+                                                    Disc<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                            <th class="default" data-index="8">
+                                                <div class="table-div flex-beetwen">
+                                                    Total<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                        </div>
+                    </div>
+                    <div class="sc-target dis-none" id="sc-form">
+                        <div id="sc-loader" class="the-loader dis-none"></div>
+                        <div class="sc-target-box">
+                            <i class="fas fa-x default clr-white" id="sc-close"></i>
+                            <h3 class="mb-2">TARGET</h3>
+                            <div class="add-group">
+                                <label>Main Sales</label>
+                                <input type="number" id="main-input" class="target-input">
+                            </div>
+                            <div class="flex-center">
+                                <div class="add-group">
+                                    <label>Furniture</label>
+                                    <input type="number" id="ftr-input" class="target-input">
+                                </div>
+                                <div class="add-group">
+                                    <label>Accessories</label>
+                                    <input type="number" id="acc-input" class="target-input">
+                                </div>
+                            </div>
+                            <div class="flex-center">
+                                <div class="add-group">
+                                    <label>FurniPro</label>
+                                    <input type="number" id="fp-input" class="target-input">
+                                </div>
+                                <div class="add-group">
+                                    <label>Comser</label>
+                                    <input type="number" id="ac-input" class="target-input">
+                                </div>
+                            </div>
+                            <div class="hr default"></div>
+                            <div class="dept-target"></div>
+                            <div class="sc-tabs flex-center">
+                                <div class="target-btn yellow" id="sc-reset">Reset</div>
+                                <div class="target-btn green" id="sc-fetch">Fetch</div>
+                                <div class="target-btn blue" id="sc-save">Save</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-fetch-table dis-none">
+                        <div class="fetch-table-box">
+                            <div class="sc-fetch-head mb-2">
+                                <i class="fas fa-x br-red clr-red" id="fetch-table-close"></i>
+                                <span class="clr-default">Reciept List</span>
+                                <i class="fas fa-arrow-right br-green clr-green" id="fetch-update"></i>
+                            </div>
+                            <div class="sc-fetch">
+                                <div class="sc-fetch-list">
+                                    <table id="fetch-table">
+                                        <thead>
+                                            <th class="default">#</th>
+                                            <th class="default" data-index="0">
+                                                <div class="table-div flex-beetwen">
+                                                    Reciept<i class="fas fa-sort-down clr-white"></i></th>
+                                                </div>
+                                            <th class="default" data-index="1">
+                                                <div class="table-div flex-beetwen">
+                                                    SKU<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                            <th class="default" data-index="2">
+                                                <div class="table-div flex-beetwen">
+                                                    Item<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                            <th class="default" data-index="3">
+                                                <div class="table-div flex-beetwen">
+                                                    Dept<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                            <th class="default" data-index="4">
+                                                <div class="table-div flex-beetwen">
+                                                    Qty<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                            <th class="default" data-index="5">
+                                                <div class="table-div flex-beetwen">
+                                                    Price<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                            <th class="default" data-index="6">
+                                                <div class="table-div flex-beetwen">
+                                                    SP<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                            <th class="default" data-index="7">
+                                                <div class="table-div flex-beetwen">
+                                                    Disc<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                            <th class="default" data-index="8">
+                                                <div class="table-div flex-beetwen">
+                                                    Total<i class="fas fa-sort-down"></i></th>
+                                                </div>
+                                            </th>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="content-bottom"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="more-content dis-none" id="setting">
+        <h2 class="set-head clr-default">Schedule</h2>
+        <div class="schedule-set">
+            <div class="schedule-head mb-2">
+                <i class="fas fa-chevron-left clr-yellow" id="sch-calendar-prev"></i>
+                <span class="sch-default clr-default"  id="sch-calendar-now">JULY 2024</span>
+                <i class="fas fa-chevron-right clr-yellow" id="sch-calendar-next"></i>
+            </div>
+            <div class="schedule-day mb-2 clr-grey">
+                <span class="clr-red">M</span>
+                <span>S</span>
+                <span>S</span>
+                <span>R</span>
+                <span>K</span>
+                <span>J</span>
+                <span>S</span>
+            </div>
+            <div class="sch-data mb-2" id="sch-data">
+                
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                <div class="sch-date begin"></div>
+                
+            </div>
+            <div class="sch-choose dis-none " id="sch-choose">
+                <div class="sch-choose-date clr-default mb-2">
+                    <span class="choose-date">01</span>
+                    <div class="choose-right">
+                        <span class="choose-month">August</span>
+                        <span class="choose-year">2024</span>
+                    </div>
+                </div>
+                <div class="sch-choose-time">
+                    <div class="time-group">
+                        <span class="">OFF</span>
+                        <span class="">No Shift</span>
+                    </div>
+                    <div class="time-group">
+                        <span class="">ALL</span>
+                        <span class="">Annual Leave</span>
+                    </div>
+                    
+                    <div class="time-group">
+                        <span class="">M0029</span>
+                        <span class="">08.00 - 18.00</span>
+                    </div>
+                    <div class="time-group">
+                        <span class="">M0058</span>
+                        <span class="">09.00 - 19.00</span>
+                    </div>
+                    <div class="time-group">
+                        <span class="">H44</span>
+                        <span class="">10.00 - 20.00</span>
+                    </div>
+                    <div class="time-group">
+                        <span class="">A0003</span>
+                        <span class="">12.00 - 22.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sch-control">
+                <div class="sch-btn blue" id="sch-fetch">Fetch</div>
+                <div class="sch-btn green" id="sch-save">Save</div>
+                <div class="sch-spacer"></div>
+                <div class="sch-icon clr-orange" id="sch-reset"><i class="fas fa-recycle"></i></div>
+                <div class="sch-icon clr-grey" id="sch-setting"><i class="fas fa-cog fa-spin"></i></div>
+            </div>
+            <div class="sch-setting dis-none">
+                <i class="fas fa-x default grid-center"></i>
+                <h4 class="clr-default text-center">Schedule Link Set</h4>
+                <div class="add-group">
+                    <label>spreadsheet</label>
+                    <input type="text" id="schedule-spreadsheet" placeholder="exp https://docs.google.com/spreadsheets/d/1uRa8SUIESZ3MMLMR6AkIjIoM-7i_IjNJk35TL288jIc/edit?usp=drivesdk">
+                </div>
+                <div class="add-group">
+                    <label>sheet</label>
+                    <input type="text" id="schedule-sheet" placeholder="Bend">
+                </div>
+                <div class="add-group">
+                    <label>header</label>
+                    <input type="text" id="schedule-header" placeholder="E6:AI6">
+                </div>
+                <div class="add-group">
+                    <label>range</label>
+                    <input type="text" id="schedule-range" placeholder="E7:AI">
+                </div>
+                <div class="add-group">
+                    <label>value</label>
+                    <input type="text" id="schedule-value" placeholder="Some text">
+                </div>
+                <button id="sch-link-update" class="default">UPDATE</button>
+                
+                <div class="hr default"></div>
+            </div>
+            <div id="sch-loader"></div>
+        </div>
+        
+    </div>
+    <nav class="default">
+        <div class="nav-link active flex-center flex-column" id="dashboard-link" data-target="dashboard" data-percent="0">
+            <i class="fas fa-home"></i>
+            <span>home</span>
+        </div>
+        <div class="nav-link flex-center  flex-column" id="fu-link" data-target="fu" data-percent="25">
+            <i class="fas fa-rocket"></i>
+            <span>followUp</span>
+        </div>
+        <div class="nav-link add flex-center flex-column" id="add-link" data-target="add" data-percent="50">
+            <i class="fas fa-plus add active"></i>
+            <span>add</span>
+        </div>
+        <div class="nav-link flex-center  flex-column" id="as-link" data-target="as" data-percent="75" >
+            <i class="fas fa-hand-holding-dollar"></i>
+            <span>afterSales</span>
+        </div>
+        <div class="nav-link flex-center flex-column" id="sc-link"data-target="sc" data-percent="100">
+            <i class="fas fa-rectangle-list"></i>
+            <span>salesCard</span>
+        </div>
+    </nav>
+    
+
+    <script src="/js/class.js"></script>
+    <script src="/js/dashboard.js"></script> 
+</body>
+</html>
