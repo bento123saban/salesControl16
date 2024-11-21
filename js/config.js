@@ -67,7 +67,8 @@ if(!localStorage.getItem("SITE"))           localStorage.setItem("SITE", JSON.st
             code: "G8"
        }
     ]))
-if(!localStorage.getItem("DEPT"))           localStorage.setItem('DEPT', JSON.stringify([
+if(!localStorage.getItem("DEPT"))           localStorage.setItem('DEPT', 
+JSON.stringify([
    {
       name : 'Living Upholstered',
       code : 'A',
