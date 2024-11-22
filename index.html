@@ -17,13 +17,19 @@
   
   <!-- JS -->
   <script src="/js/config.js"></script>
-  
+  <script src="/js/class.js"></script>
   <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/font/fontawesome/css/all.css">
+    <script>
+        
+    </script>
 </head>
 
 <body>
+    <div id="start-load" class="the-loader">
+        <div class="loader"></div>
+    </div>
     <div class="login default dis-none">
         <div class="login-form white">
             <h6>LOGIN </h6>
@@ -466,19 +472,7 @@
                         <div class="hr white"></div>
                     </div>
                     <div class="as-tab">
-                        <div class="position-btn" data-text="NDC-PREPARE"><img src="asImg/forklift.png" alt="ndc-prepare"></div>
-                        <div class="position-btn" data-text="SDC-PREPARE"><img src="asImg/coworking.png" alt="sdc-prepare"></div>
-                        <div class="position-btn" data-text="LOADING"><img src="asImg/container (1).png" alt="loading"></div>
-                        <div class="position-btn" data-text="PORT-ORIGIN"><img src="asImg/stack.png" alt="port-origin"></div>
-                        <div class="position-btn" data-text="OTW"><img src="asImg/cargo-ship (1).png" alt="otw"></div>
-                        <div class="position-btn" data-text="YARD"><img src="asImg/cargo (2).png" alt="yard"></div>
-                        <div class="position-btn" data-text="UNLOADING"><img src="asImg/container (2).png" alt="unloading"></div>
-                        <div class="position-btn" data-text="READY"><img src="asImg/check.png" alt="ready"></div>
-                        <div class="position-btn" data-text="PICK-UP"><img src="asImg/delivery-service.png" alt="pick-up"></div>
-                        <div class="position-btn" data-text="DELIVERY"><img src="asImg/delivery-truck.png" alt="delivery"></div>
-                        <div class="position-btn" data-text="INSTALASI"><img src="asImg/repair-tools.png" alt="instalasi"></div>
-                        <div class="position-btn" data-text="PENDING DELIV"><img src="asImg/deadline.png" alt="pending"></div>
-                        <div class="position-btn" data-text="PENDING PICKUP"><img src="asImg/deadline.png" alt="pending"></div>
+                        
                     </div> 
                     <div class="hr default"></div>
                     <div class="as-list">
@@ -1293,7 +1287,9 @@
     </nav>
     
 
-    <script src="/js/class.js"></script>
     <script src="/js/dashboard.js"></script> 
+    <script>
+        window.addEventListener('load', () => document.querySelector('#start-load').remove())
+    </script>
 </body>
 </html>
