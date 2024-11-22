@@ -896,16 +896,75 @@ class salesCard {
             if (this.scDate.value == '') return new main().alertHandle('alert', 'Pilih tanggal pada halaman awal salesCard')
             //if (!confirm('Fetch ?')) return
             //return new salesCard().fetchData
-            const ft = new salesCard().fetchData
-            new main().alertHandle('confirm', 'Fetch ?', '', async () => ft())
+            //const ft = new salesCard().fetchData
+            //return new main().alertHandle('confirm', 'Fetch ?', '', async () => ft())
+            new main().alertHandle('confirm', 'Fetch ?', '', async (value = '') => {
+                
+                const loader    = new main().setLoad('#sc-loader'),
+                    urlDT       = JSON.parse(localStorage.getItem('SETTINGS')).url
+                loader.play()
+                const respon    = await new main().fetchData({
+                            url         : urlDT.main,
+                            spredsheet  : urlDT.salesCard.url,
+                            sheet       : urlDT.salesCard.sheet,
+                            header      : urlDT.salesCard.header,
+                            range       : urlDT.salesCard.range,
+                            value       : value
+                        }),
+                    dateCode    = new main().dateCode(new Date(document.querySelector("#sc-date-input").value)),
+                    rcpMonth    = dateCode.rcpMonth,
+                    monthCd     = dateCode.monthCode
+                if (!respon) {
+                    loader.stop()
+                    document.querySelector('#fetch-table-close').click()
+                }
+                let data    = await respon,
+                    array   = [],
+                    HTML    = ``
+                data.forEach((x, i) => {
+                    if (x.reciept == "" || x.dept == '' || x.reciept.indexOf(rcpMonth) < 0) return
+                    array.push(x)
+                })
+                //alert('good')
+                await new salesCard().setTable(array, '#fetch-table')
+                loader.stop()
+                
+                document.querySelector('#fetch-update').onclick = () => {
+                    //if (!confirm('Update ?')) return
+                    new main().alertHandle('confirm', '', 'Update ?', function () {
+                        const allDT = JSON.parse(localStorage.getItem('SALESCARD'))
+                        const i = allDT.findIndex(x => x.code == monthCd)
+                        if (i >= 0) allDT[i].data = array
+                        else allData.push({
+                            code    : monthCd,
+                            data    : array,
+                            target  : {
+                                main    : 170000000,
+                                ftr     : 170000000 * 0.8,
+                                acc     : 170000000 * 0.2,
+                                fp      : 25,
+                                comser  : 500000
+                            }
+                        })
+                        localStorage.setItem('SALESCARD', JSON.stringify(allDT))
+                        new salesCard().calculate()
+                        document.querySelector('#fetch-table-close').click()
+                        new main().alertHandle('success', 'Fetch success', scForm.classList.add("dis-none"))
+                    })
+                    //document.querySelector().classList.add('dis-none')
+                }
+                document.querySelector('.sc-fetch-table').classList.remove('dis-none')
+            
+            })
         }
+        
         save.onclick            = () => {
             
             if (this.scDate.value == '') return new main().alertHandle('error', 'Tanggal tidak ditemukan', '', function () {
                     close.click()
                     document.querySelector('#sc-date-input').click()
                 })
-            const allDT = this.allData
+            const allDT = JSON.parse(localStorage.getItem('SALESCARD'))
             return new main().alertHandle('confirm', 'Save ?', '', function () {
                 
                 let param   = true
@@ -951,6 +1010,7 @@ class salesCard {
                 new salesCard().calculate()
             })
         }
+        
         this.scText.value       = new main().dateCode(new Date()).longText
         this.scDate.valueAsDate = new Date ()
         this.scDate.onchange    = () => {
