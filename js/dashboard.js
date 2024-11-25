@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', async function (param) {
             return link.classList.remove('active')
         })
         this.scrollTo({left : scroll, behavior : "smooth"})
-    }*/
+    }*/ 
     document.querySelectorAll('.nav-link').forEach((link, i)=> {
         link.onclick = function () {
             document.querySelectorAll('.nav-link').forEach(i => i.classList.remove('active'))

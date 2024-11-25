@@ -443,9 +443,8 @@ class salesCard {
                     qty = 0, total = 0, sku = [], dept = [], rcp = []
                     
                 dayData.forEach(data => {
-                    //console.log(typeof data.qty)
-                    const dxQty     = (typeof data.qty == 'number') ? data.qty : parseInt(data.qty.replace(/,/g, ""))
-                    const dxTotal   = (typeof data.total == 'string') ? parseInt(data.total.replace(/,/g, "")) : data.total;
+                    const dxQty     = (typeof data.qty == 'number') ? data.qty : parseInt(data.qty.replace(/\D/g, ""))
+                    const dxTotal   = (typeof data.total == 'number') ? data.total : parseInt(data.total.replace(/\D/g, ""));
                     
                     qty += parseFloat(dxQty)
                     total += parseFloat(dxTotal)
@@ -463,13 +462,12 @@ class salesCard {
                     if (rcpIndex < 0) rcp.push(data.reciept.toUpperCase())
                     if (skuIndex < 0) sku.push((data.sku + "") .toUpperCase())
                     
-                    //dayMain += parseFloat(dxTotal)
-                    
                     if (deptType == 'FURNITURE') dayFtr += parseFloat(dxTotal)
                     if (deptType == 'ACCESSORIES') dayAcc += parseFloat(dxTotal)
                     if (deptType == 'FURNITURE' || deptType == 'ACCESSORIES') dayMain += parseFloat(dxTotal)
-                    if (data.item.toUpperCase().indexOf('FURNIPRO') >= 0) return dayFp += parseFloat(dxQty)
-                    if (data.item.toUpperCase().indexOf('CUCI AC') >= 0) return dayComser += parseFloat(dxTotal)
+                    if (data.item.toUpperCase().indexOf('FURNIPRO') >= 0) dayFp += parseFloat(dxQty)
+                    if (data.item.toUpperCase().indexOf('JASA CUCI AC') >= 0) dayComser += parseFloat(dxTotal)
+                    
                 })
                 
                 const DMain = this.countTarget((dayTarget.main <= 0) ? 1000000 : dayTarget.main, 1, dayMain),
@@ -894,10 +892,6 @@ class salesCard {
         reset.onclick           = () => scForm.querySelectorAll('input').forEach (input => input.value = '')
         fetch.onclick           = async () => { 
             if (this.scDate.value == '') return new main().alertHandle('alert', 'Pilih tanggal pada halaman awal salesCard')
-            //if (!confirm('Fetch ?')) return
-            //return new salesCard().fetchData
-            //const ft = new salesCard().fetchData
-            //return new main().alertHandle('confirm', 'Fetch ?', '', async () => ft())
             new main().alertHandle('confirm', 'Fetch ?', '', async (value = '') => {
                 
                 const loader    = new main().setLoad('#sc-loader'),
@@ -925,7 +919,6 @@ class salesCard {
                     if (x.reciept == "" || x.dept == '' || x.reciept.indexOf(rcpMonth) < 0) return
                     array.push(x)
                 })
-                //alert('good')
                 await new salesCard().setTable(array, '#fetch-table')
                 loader.stop()
                 
@@ -957,9 +950,7 @@ class salesCard {
             
             })
         }
-        
         save.onclick            = () => {
-            
             if (this.scDate.value == '') return new main().alertHandle('error', 'Tanggal tidak ditemukan', '', function () {
                     close.click()
                     document.querySelector('#sc-date-input').click()
@@ -1010,7 +1001,6 @@ class salesCard {
                 new salesCard().calculate()
             })
         }
-        
         this.scText.value       = new main().dateCode(new Date()).longText
         this.scDate.valueAsDate = new Date ()
         this.scDate.onchange    = () => {

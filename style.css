@@ -263,11 +263,11 @@ body {
 .br-shipping, .br-purple { border-color: purple !important;}
 
 .ready, .blue, [data-bg="blue"] {
-    background: linear-gradient(45deg, #008CCC, deepskyblue) !important;
+    background: linear-gradient(45deg,deepskyblue, #008CCC) !important;
     color: white !important;
     border: none !important;
 }
-.color-ready, .clr-blue, [data-color="blue"] { color: deepskyblue !important;}
+.color-ready, .clr-blue, [data-color="blue"] { color: #008CCC !important;}
 .br-ready, .br-blue{border-color: deepskyblue !important;}
 
 .delivery, .pickup, .red, [data-bg="red"] {
@@ -307,7 +307,7 @@ body {
     color: white !important;
     border: none !important;
 }
-.color-fuout, .clr-orange, [data-color="orange"] {color: orange !important;}
+.color-fuout, .clr-orange, [data-color="orange"] {color: orangered !important;}
 .br-fuout, .br-orange {border-color: orange !important;}
 
 .white, [data-bg="white"] {
@@ -2165,46 +2165,29 @@ tbody tr:nth-child(odd) td {backdrop-filter: brightness(90%);}
     padding: 15px;
 }
 .as-tab {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 7px;
-    align-items: center;
     padding: 0 15px;
 }
-.position-btn {
-    height: 60px !important;
-    aspect-ratio: 1 !important;
-    border-radius: 6px;
-    background: #eee;
-    margin-bottom: 20px;
-    display: grid;
-    place-items: center;
-    position: relative;
-    border: 2px solid lightgray;
-    color: darkcyan;
+.as-onprogress {
+    padding: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1.3px solid white !important;
 }
-.position-btn::after {
-    content: attr(data-text)"";
-    position: absolute;
-    bottom: 4px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    font-size: 8px;
-    color: inherit;
-    width: 300%;
+.as-onprogress h3 {
+    margin: 0;
+    padding: 10px 15px;
+    border-bottom: 1.3px dotted white !important;
+}
+.as-onprogress p {
+    font-size: 10px;
+    display: flex;
+    gap: 15px;
+    padding: 5px 15px 10px !important;
+    margin: 0;
+    filter: brightness(220%);
+    text-transform: uppercase;
     font-weight: bolder;
 }
-.position-btn img {
-    object-fit: cover;
-    height: 20px;
-    -webkit-filter: drop-shadow(1px 1px 0 #000) 
-                    drop-shadow(-1.5px -1.5px 0 white);
-    filter:drop-shadow(1px 1px 0 #000) 
-                    drop-shadow(-1.5px -1.5px 0 white);
-}
-
 
 .as-list {
     padding: 0 15px;
