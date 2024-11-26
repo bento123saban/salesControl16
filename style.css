@@ -2166,6 +2166,10 @@ tbody tr:nth-child(odd) td {backdrop-filter: brightness(90%);}
 }
 .as-tab {
     padding: 0 15px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto auto;
+    gap: 10px;
 }
 .as-onprogress {
     padding: 0;
@@ -2173,21 +2177,30 @@ tbody tr:nth-child(odd) td {backdrop-filter: brightness(90%);}
     overflow: hidden;
     border: 1.3px solid white !important;
 }
-.as-onprogress h3 {
+.as-onprogress h5 {
+    font-size: 14px !important;
     margin: 0;
-    padding: 10px 15px;
-    border-bottom: 1.3px dotted white !important;
+    padding: 8px 15px;
+    border-bottom: 1.5px solid gold !important;
 }
 .as-onprogress p {
     font-size: 10px;
-    display: flex;
-    gap: 15px;
-    padding: 5px 15px 10px !important;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    padding: 3px 10px 10px !important;
     margin: 0;
-    filter: brightness(220%);
     text-transform: uppercase;
-    font-weight: bolder;
+    font-weight: thin;
+    color: gray;
 }
+.as-onprogress span {
+    width: 100%;
+    padding: 0 0 1px 0;
+    border-bottom: 1px solid gold;
+}
+
 
 .as-list {
     padding: 0 15px;

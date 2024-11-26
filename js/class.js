@@ -328,14 +328,23 @@ class salesCard {
     countTarget = function (target, progress, value) {
         let smtd        = Math.ceil(target * progress),
             smtdPrc     = (progress*100).toFixed(0),
+            
             current     = (value < smtd) ? value : smtd,
             currentPrc  = parseFloat(((current/target)*100).toFixed(2)),
-            gap         = value - smtd,
-            gapPrc      = (value >= target) ? 100 - currentPrc : parseFloat(((gap/target)*100).toFixed(2)),
+            
+            gap         = parseInt(value - smtd),
+            gapPrc      = parseFloat(((gap/target)*100).toFixed(2)),
+            
+            trueGap     = gap,
+            trueGapPrc  = (gap / target),
+            
             toAcv       = value - target,
             toAcvPrc    = parseFloat(((toAcv/target)*100).toFixed(2)),
+            
             sales       = parseInt(value) ,
             salesPrc    = ((sales/target)*100).toFixed(2) + '%'
+            
+        console.log((100 - currentPrc).toFixed(2), 'target')  
         return {
             smtd        : smtd.toLocaleString(),
             smtdPrc     : smtdPrc + '%',
@@ -343,7 +352,7 @@ class salesCard {
             currentPrc  : currentPrc + '%',
             gap         : (value >= target) ? '☆☆☆' : ((gap > 0) ? '+' : '') + parseInt(gap) .toLocaleString(),
             gapPrc      : ((gap > 0) ? '+' : '') + gapPrc + '%',
-            gapPrcx     : (gapPrc < 0) ? -1 * gapPrc + '%' : '+' + gapPrc + '%',
+            gapPrcx     : ((gapPrc < 0) ? -1 * gapPrc : '+' + gapPrc) + '%',
             toAcv       : ((toAcv > 0) ? '+' : '') + toAcv.toLocaleString(),
             toAcvPrc    : toAcvPrc + '%',
             sales       : sales.toLocaleString(),
@@ -432,13 +441,13 @@ class salesCard {
                     daySch          = new schedule().byDate(dayDate),
                     color           = (daySch.use) ? daySch.color : 'default',
                     dayTarget       = {
-                        main    : remainMain / remainWork,
-                        ftr     : remainFtr / remainWork,
-                        acc     : remainAcc / remainWork,
-                        fp      : remainFp / remainWork,
-                        comser  : remainComser / remainWork
+                        main    : Math.ceil(remainMain / remainWork),
+                        ftr     : Math.ceil(remainFtr / remainWork),
+                        acc     : Math.ceil(remainAcc / remainWork),
+                        fp      : Math.ceil(remainFp / remainWork),
+                        comser  : Math.ceil(remainComser / remainWork)
                     }
-                
+                //console.log(dayTarget)
                 let dayMain = 0, dayFtr = 0, dayAcc = 0, dayFp = 0, dayComser = 0,
                     qty = 0, total = 0, sku = [], dept = [], rcp = []
                     
@@ -469,13 +478,13 @@ class salesCard {
                     if (data.item.toUpperCase().indexOf('JASA CUCI AC') >= 0) dayComser += parseFloat(dxTotal)
                     
                 })
-                
+                //console.log(dayMain, dayFtr, dayAcc, dayFp, dayComser)
                 const DMain = this.countTarget((dayTarget.main <= 0) ? 1000000 : dayTarget.main, 1, dayMain),
                     DFtr    = this.countTarget((dayTarget.ftr <= 0) ? 1000000 : dayTarget.ftr, 1, dayFtr),
                     DAcc    = this.countTarget((dayTarget.acc <= 0) ? 1000000 : dayTarget.acc, 1, dayAcc),
                     DFp     = this.countTarget((dayTarget.fp <= 0) ? 2 : dayTarget.fp, 1, dayFp),
                     DComser = this.countTarget((dayTarget.comser <= 0) ? 75000 : dayTarget.comser, 1, dayComser)
-                
+                //console.log(DMain.currentPrc)
                 let dayDept =``
                 dept.forEach(x => {
                     const i = deptMTD.findIndex(d => d.code.toUpperCase() == x.code.toUpperCase())
