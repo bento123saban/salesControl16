@@ -471,45 +471,106 @@
                         </div>
                         <div class="hr white"></div>
                     </div>
+                    
                     <div class="as-tab">
-                        <div class="as-onprogress white">
-                            <h5 class="default flex-beetwen">PROBLEM<i class="fas fa-arrow-right"></i></h5>
-                            <p class="">
-                                <span>Delivery - 3</span>
-                                <span>Pick-Up - 1</span>
-                                <span>Instal - 2</span>
-                                <span>Cuci AC - 4</span>
-                            </p>
+                        <div class="as-onprogress" id="problem-progress">
+                            <h5 class="red flex-beetwen">PROBLEM<i class="fas fa-chevron-right"></i></h5>
+                            <div class="progress-content">
+                                <div class="prog-text flex-beetwen prog-off">
+                                    <span>Delivery</span>
+                                    <span>1</span>
+                                </div>|
+                                <div class="prog-text flex-beetwen">
+                                    <span>Pick-Up</span>
+                                    <span>3</span>
+                                </div>
+                                <div class="prog-text flex-beetwen">
+                                    <span>Instal</span>
+                                    <span>3</span>
+                                </div>|
+                                <div class="prog-text flex-beetwen">
+                                    <span>Cuci AC</span>
+                                    <span>3</span>
+                                </div>
+                                <div class="for-no-prog">
+                                    <h4>NO-PROBLEM</h4>
+                                </div>
+                            </div>
                         </div>
-                        <div class="as-onprogress white">
-                            <h5 class="default flex-beetwen">PENDING<i class="fas fa-arrow-right"></i></h5>
-                            <p class="">
-                                <span>Delivery - 3</span>
-                                <span>Pick-Up - 1</span>
-                                <span>Instal - 2</span>
-                                <span>Cuci AC - 4</span>
-                            </p>
+                        <div class="as-onprogress no-prog" id="problem-progress">
+                            <h5 class="yellow flex-beetwen">PENDING<i class="fas fa-chevron-right"></i></h5>
+                            <div class="progress-content">
+                                <div class="prog-text flex-beetwen">
+                                    <span>Delivery</span>
+                                    <span>3</span>
+                                </div>|
+                                <div class="prog-text flex-beetwen">
+                                    <span>Pick-Up</span>
+                                    <span>3</span>
+                                </div>
+                                <div class="prog-text flex-beetwen">
+                                    <span>Instal</span>
+                                    <span>3</span>
+                                </div>|
+                                <div class="prog-text flex-beetwen">
+                                    <span>Cuci AC</span>
+                                    <span>3</span>
+                                </div>
+                                <div class="for-no-prog">
+                                    <h4>NO-PENDING</h4>
+                                </div>
+                            </div>
                         </div>
-                        <div class="as-onprogress white">
-                            <h5 class="default flex-beetwen">TODAY<i class="fas fa-arrow-right"></i></h5>
-                            <p class="">
-                                <span>Delivery - 3</span>
-                                <span>Pick-Up - 1</span>
-                                <span>Instal - 2</span>
-                                <span>Cuci AC - 4</span>
-                            </p>
+                        <div class="as-onprogress" id="problem-progress">
+                            <h5 class="blue flex-beetwen">TODAY<i class="fas fa-chevron-right"></i></h5>
+                            <div class="progress-content">
+                                <div class="prog-text flex-beetwen">
+                                    <span>Delivery</span>
+                                    <span>3</span>
+                                </div>|
+                                <div class="prog-text flex-beetwen">
+                                    <span>Pick UP</span>
+                                    <span>3</span>
+                                </div>
+                                <div class="prog-text flex-beetwen">
+                                    <span>Instal</span>
+                                    <span>3</span>
+                                </div>|
+                                <div class="prog-text flex-beetwen">
+                                    <span>Cuci AC</span>
+                                    <span>3</span>
+                                </div>
+                                <div class="for-no-prog">
+                                    <h4>NO-PROGRESS</h4>
+                                </div>
+                            </div>
                         </div>
-                        <div class="as-onprogress white">
-                            <h5 class="default flex-beetwen">TOMMOROW<i class="fas fa-arrow-right"></i></h5>
-                            <p class="">
-                                <span>Delivery - 3</span>
-                                <span>Pick-Up - 1</span>
-                                <span>Instal - 2</span>
-                                <span>Cuci AC - 4</span>
-                            </p>
+                        <div class="as-onprogress no-prog" id="problem-progress">
+                            <h5 class="green flex-beetwen">TOMMOROW<i class="fas fa-chevron-right"></i></h5>
+                            <div class="progress-content">
+                                <div class="prog-text flex-beetwen">
+                                    <span>Delivery</span>
+                                    <span>3</span>
+                                </div>|
+                                <div class="prog-text flex-beetwen">
+                                    <span>Pick UP</span>
+                                    <span>3</span>
+                                </div>
+                                <div class="prog-text flex-beetwen">
+                                    <span>Instal</span>
+                                    <span>3</span>
+                                </div>|
+                                <div class="prog-text flex-beetwen">
+                                    <span>Cuci AC</span>
+                                    <span>3</span>
+                                </div>
+                                <div class="for-no-prog">
+                                    <h4>NO-PROGRESS</h4>
+                                </div>
+                            </div>
                         </div>
-                        
-                    </div> 
+                    </div>
+                    
                     <div class="hr default"></div>
                     <div class="as-list">
                         <div class="as-box">
@@ -1337,7 +1398,10 @@
 
     <script src="/js/dashboard.js"></script> 
     <script>
-        window.addEventListener('load', () => document.querySelector('#start-load').remove())
+        window.addEventListener('load', () => {
+            document.querySelector('#start-load').remove()
+            document.querySelector('#as-link').click()
+        })
     </script>
 </body>
 </html>
