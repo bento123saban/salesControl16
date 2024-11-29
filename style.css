@@ -202,10 +202,10 @@ body {
 .w-100 {width: 100% !important;}
 .w-50 {width: 50% !important;}
 
-.grid-center {
-    display: grid;
-    place-items: center;
-}
+.align-left {text-align: left !important;}
+.align-right {text-align: right !important;}
+.align-center {text-align: center !important;}
+.align-justify {text-align: justify !important;}
 
 .hr {
     height: 2px;
@@ -2241,10 +2241,36 @@ tbody tr:nth-child(odd) td {backdrop-filter: brightness(90%);}
      
 }
 
-
-
-
-
+.as-box {
+    padding: 3px;
+    border-radius: 8px;
+}
+.as-head {
+    border-bottom: 1.3px dashed;
+    padding: 5px 10px;
+    border-radius: 5px 5px 0 0;
+}
+.as-num {
+    padding: 5px 0;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    color: gray;
+}
+.as-site-box {
+    font-size: 11px;
+    border-left: 2px solid darkcyan;
+    gap: 3px;
+    background: #eee;
+    margin-bottom: 5px;
+}
+.as-site-box span {
+    padding:5px;
+    width: fit-content;
+}
+.as-site-box span:nth-child(3) {
+    width: 100px;
+    font-weight: bold;
+}
 
 
 .more-content {
