@@ -344,7 +344,7 @@ class salesCard {
             sales       = parseInt(value) ,
             salesPrc    = ((sales/target)*100).toFixed(2) + '%'
             
-        console.log((100 - currentPrc).toFixed(2), 'target')  
+        //console.log((100 - currentPrc).toFixed(2), 'target')  
         return {
             smtd        : smtd.toLocaleString(),
             smtdPrc     : smtdPrc + '%',
@@ -755,6 +755,7 @@ class salesCard {
             if (x.target == '') theDept[n].target = target
         })
         new department().generateTarget(theDept)
+        new salesCard().setTable(new salesCard().getData().data, '#sc-reciept-table')
         return true
     }
     getData     = function () {
@@ -1054,7 +1055,7 @@ class salesCard {
         })
         if (this.scDate.value == '') this.scDate.valueAsDate = new Date ()
         if (! await this.calculate()) return undefined 
-        await this.setTable(this.getData().data, '#sc-reciept-table')
+        //await this.setTable(this.getData().data, '#sc-reciept-table')
         
         window.addEventListener('click', (e) => {
             const target = e.target
