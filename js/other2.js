@@ -1,0 +1,1 @@
+=IF(OR($E5 = ""; $O5); ""; INDEX(IFNA(QUERY(IMPORTRANGE("https://docs.google.com/spreadsheets/d/1n7fIX2rPZ2RZjRWOU_qa63PFjMEvKvvS1tq8BxBcwHU/edit?usp=drivesdk"; "DO PENDING!$A$2:$L"); "SELECT Col9, Col10, Col11 WHERE Col3 = '"&$E5&"'"); "");1;0))
